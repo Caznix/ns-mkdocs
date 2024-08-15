@@ -1,0 +1,20 @@
+site_name: Northstar modding docs
+site_url: https://mydomain.org/mysite
+theme:
+  name: material
+  palette:
+    scheme: "slate"
+
+markdown_extensions:
+  - pymdownx.highlight:
+      use_pygments: true
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.caret
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.superfences
+  - pymdownx.details
+  - admonition

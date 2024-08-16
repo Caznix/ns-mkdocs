@@ -25,14 +25,14 @@ value. This may be `null`.
 To create a new coroutine, call a function with the `thread` keyword
 before.
 
-``` 
+```squirrel
 thread void function(){}()
 thread MyFunction()
 ```
 
 To get a thread object, use the `newthread` function.
 
-``` 
+```squirrel
 void function CoroutineExample()
 {
     suspend( "passback" ) // passback is optional
@@ -50,7 +50,7 @@ The `wait` statement halts threads for a set amount of time specified
 after the `wait` keyword. Integers and floats are accepted as times in
 seconds.
 
-``` 
+```squirrel
 void function WaitExample( float n )
 {
     wait 1 // wait 1 second
@@ -71,7 +71,7 @@ to avoid the game freezing.
 If you want to wait until a thread is finished, you can spin off the
 thread that you wait for with the `waitthread` keyword.
 
-``` 
+```squirrel
 void function ParentThread()
 {
     printt( "pre spinoff " + string( Time() ) )
@@ -90,7 +90,7 @@ Use the `OnThreadEnd` function to execute a callback after a thread has
 ended. This is useful for cleanup functions that remove entities after
 they\'re used or similar.
 
-``` 
+```squirrel 
 void function PlayIncomingFX( vector origin, int teamNum )
 {
     wait 1.50
@@ -119,7 +119,7 @@ void function PlayIncomingFX( vector origin, int teamNum )
 
 ### Example Script
 
-``` 
+```squirrel
 void function SetPositionDelayed( entity ent, vector pos, float delay )
 {
     wait delay
@@ -170,7 +170,7 @@ aren\'t properties of an entity.
 
 > Wait for any of the passed signals to be triggered.
 >
-> ``` 
+> ```squirrel
 > // Wait for the NPC to die, delete, or get leeched, then remove the npc from the array
 > WaitSignal( ent, "OnDeath", "OnDestroy", "OnLeeched" )
 > ```
@@ -182,7 +182,7 @@ aren\'t properties of an entity.
 For example, if we want to tell a player not to give up after being
 killed several times, we can write it this way:
 
-``` 
+```squirrel
 // First, we register signal we want to use
 RegisterSignal("OnMultipleDeaths")
 
@@ -272,7 +272,7 @@ set up without target entity:
 
 #### Example
 
-``` 
+```squirrel
 void function FlagExample()
 {
     FlagInit( "BombHasExploded" )

@@ -1,8 +1,0 @@
-setup.py
-squirrel_lexer/__init__.py
-squirrel_lexer/lexer.py
-squirrel_lexer.egg-info/PKG-INFO
-squirrel_lexer.egg-info/SOURCES.txt
-squirrel_lexer.egg-info/dependency_links.txt
-squirrel_lexer.egg-info/entry_points.txt
-squirrel_lexer.egg-info/top_level.txt

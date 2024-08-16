@@ -1,2 +1,0 @@
-[pygments.lexers]
-squirrel_lexer = squirrel_lexer.lexer:SquirrelLexer

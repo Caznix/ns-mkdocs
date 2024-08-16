@@ -1,0 +1,14 @@
+[project]
+name = "r2northstart-moddingdocs"
+version = "0.1"
+dependencies = ["mkdocs-material[imaging]", "pygments"]
+
+[build-system]
+requires = ["setuptools >= 61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["squirrel_syntax"]
+
+[project.entry-points."pygments.lexers"]
+squirrel_syntax = "squirrel_syntax.lexer:SquirrelLexer"

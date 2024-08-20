@@ -1,5 +1,5 @@
 site_name: Northstar modding docs
-site_url: https://docs.northstar.tf/ # TODO: is this correct?
+site_url: https://caznix.github.io/ns-mkdocs/
 repo_url: https://github.com/Caznix/ns-mkdocs # TODO: replace this
 theme:
   name: material

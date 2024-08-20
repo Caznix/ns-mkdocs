@@ -1,6 +1,7 @@
 site_name: Northstar modding docs
 site_url: https://caznix.github.io/ns-mkdocs/
 repo_url: https://github.com/Caznix/ns-mkdocs # TODO: replace this
+edit_uri: blob/main/docs/
 theme:
   name: material
   palette:
@@ -24,6 +25,9 @@ theme:
     - toc.follow
     - navigation.instant
     - navigation.instant.prefetch
+  icon:
+    edit: material/pencil 
+    view: material/eye
 
 validation:
   omitted_files: warn

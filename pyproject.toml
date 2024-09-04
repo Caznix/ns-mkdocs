@@ -1,14 +1,25 @@
-[project]
-name = "r2northstart-moddingdocs"
-version = "0.1"
-dependencies = ["mkdocs-material[imaging]", "pygments"]
+[tool.poetry]
+name = "moddingdocs"
+version = "0.1.0"
+description = "This repo contains the technical documentation on all things related to making Northstar mods."
+authors = ["R2Northstar"]
+license = "MIT"
+packages = [
+    { include = "squirrel_syntax/*.py" },
+]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+#furo = "^2023.09.10"
+pygments = { extras = ["plugins"], version = "^2.16.1" }
+mkdocs-material = { extras = ["imaging"], version = "^9.5.34" }
+
+
+[tool.poetry.dev-dependencies]
+
+[tool.poetry.plugins."pygments.lexers"]
+"squirrel" = "squirrel_support:SquirrelLexer"
 
 [build-system]
-requires = ["setuptools >= 61.0"]
-build-backend = "setuptools.build_meta"
-
-[tool.setuptools]
-packages = ["squirrel_syntax"]
-
-[project.entry-points."pygments.lexers"]
-squirrel_syntax = "squirrel_syntax.lexer:SquirrelLexer"
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
